@@ -1,0 +1,23 @@
+@use'../custom' as *;
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background:url("../../images/main_bag.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h2{
+    color: $white;
+    font-family: "lora", sans-serif;
+    font-weight: 400;
+}
+p{
+    color: $white;
+    font-family: "lora", sans-serif;
+    font-weight: 400;
+}
+

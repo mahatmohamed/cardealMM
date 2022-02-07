@@ -1,0 +1,248 @@
+@use'../custom' as *;
+
+.top-banner-section {
+    display: grid;
+    grid-template-columns: 1fr; // 
+    grid-template-rows: 750px; // 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-content: center;
+    justify-content: center;
+  
+    .banner-image-div {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .banner-overlay-div {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .banner-text-div {
+      grid-area: 1 / 1 / 2 / 2;
+    } 
+  
+  // Banner image (layer 1)
+  .banner-image {
+    display: grid;
+    min-width: 350px; 
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    
+    
+    
+    
+  }
+  
+  .banner-overlay-div {
+    display: grid;
+    height: 60rem;
+    max-width: 100%;
+    background: $overlay;
+    
+    
+  }
+  
+  // Banner html components (layer 3)
+  // banner text
+  .banner-text-div {
+    display: grid;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10rem;
+  }
+  
+  // Typograhy: *** This is all the stuff you change
+  .banner-h1-text {
+    font-family: "lora", sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+  }
+  
+  .banner-body-text {
+    // font can get larger, but no smaller than 10 points.
+    font-size: 20px;
+    margin-top: 0.5em;
+    color: $white;
+    text-decoration: none;
+
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 1rem;
+    border: .5px solid;
+    position: relative;
+    overflow: hidden;
+    color: $white;
+    height: 100%;
+    width: 7rem;
+    background: $secondary;
+  
+    &:hover {
+      box-shadow: 1px 1px 25px 10px $primary;
+    }
+  
+    
+  
+    &:hover:before {
+      left: 100%;
+    }
+  }
+ 
+}
+
+.herod {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  
+}
+.render {
+  align-self: center;
+  font-family: 'lora', sans-serif ;
+  font-weight: 700;
+  font-size: 12em;
+  color: $primary;
+  text-shadow:
+    white 0.006em 0.006em 0.007em,
+    #9c9c9c 1px 1px 1px,
+    #9c9c9c 1px 2px 1px,
+    #9c9c9c 1px 3px 1px,
+    #9c9c9c 1px 4px 1px,
+    #9c9c9c 1px 5px 1px,
+    #9c9c9c 1px 6px 1px,
+    #9c9c9c 1px 7px 1px,
+    #9c9c9c 1px 8px 1px,
+    #9c9c9c 1px 9px 1px,
+    #9c9c9c 1px 10px 1px,
+    #9c9c9c 1px 11px 1px,
+    #9c9c9c 1px 12px 1px,
+    rgba(16, 16, 16, 0.4) 1px 18px 6px,
+    rgba(16, 16, 16, 0.2) 1px 22px 10px,
+    rgba(16, 16, 16, 0.2) 1px 26px 35px,
+    rgba(16, 16, 16, 0.4) 1px 30px 65px,
+    white -0.15em -0.1em 100px;
+
+  &:hover {
+    margin-top: -20px;
+    text-shadow:
+    white 0.006em 0.006em 0.007em,
+    #9c9c9c 1px 1px 1px,
+    #9c9c9c 1px 2px 1px,
+    #9c9c9c 1px 3px 1px,
+    #9c9c9c 1px 4px 1px,
+    #9c9c9c 1px 5px 1px,
+    #9c9c9c 1px 6px 1px,
+    #9c9c9c 1px 7px 1px,
+    #9c9c9c 1px 8px 1px,
+    #9c9c9c 1px 9px 1px,
+    #9c9c9c 1px 10px 1px,
+    #9c9c9c 1px 11px 1px,
+    #9c9c9c 1px 12px 1px,
+    rgba(16, 16, 16, 0.4) 1px 38px 26px,
+    rgba(16, 16, 16, 0.2) 1px 42px 30px,
+    rgba(16, 16, 16, 0.2) 1px 46px 65px,
+    rgba(16, 16, 16, 0.4) 1px 50px 95px,
+    white -0.15em -0.1em 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+
+  .banner-image {
+    display: grid;
+    min-width: 100px; 
+    width: 100%;
+    height: 60rem;
+    object-fit: cover; 
+    box-shadow: -5px 7px 7px 5px $secondary;
+  
+  .banner-image-div {
+    display: grid;
+    min-width: 350px; 
+    width: 80%;
+    height: 100%;
+    object-fit: cover; 
+  }
+}
+  .herod {
+    margin: 0;
+    padding: 0;
+    background:$overlay;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    
+  }
+  .render {
+    align-self: center;
+    font-family: 'lora', sans-serif ;
+    font-weight: 700;
+    font-size: 5em;
+    color: $primary;
+    text-shadow:
+      white 0.006em 0.006em 0.007em,
+      #9c9c9c 1px 1px 1px,
+      #9c9c9c 1px 2px 1px,
+      #9c9c9c 1px 3px 1px,
+      #9c9c9c 1px 4px 1px,
+      #9c9c9c 1px 5px 1px,
+      #9c9c9c 1px 6px 1px,
+      #9c9c9c 1px 7px 1px,
+      #9c9c9c 1px 8px 1px,
+      #9c9c9c 1px 9px 1px,
+      #9c9c9c 1px 10px 1px,
+      #9c9c9c 1px 11px 1px,
+      #9c9c9c 1px 12px 1px,
+      rgba(16, 16, 16, 0.4) 1px 18px 6px,
+      rgba(16, 16, 16, 0.2) 1px 22px 10px,
+      rgba(16, 16, 16, 0.2) 1px 26px 35px,
+      rgba(16, 16, 16, 0.4) 1px 30px 65px,
+      white -0.15em -0.1em 100px;
+  
+    &:hover {
+      margin-top: -20px;
+      text-shadow:
+      white 0.006em 0.006em 0.007em,
+      #9c9c9c 1px 1px 1px,
+      #9c9c9c 1px 2px 1px,
+      #9c9c9c 1px 3px 1px,
+      #9c9c9c 1px 4px 1px,
+      #9c9c9c 1px 5px 1px,
+      #9c9c9c 1px 6px 1px,
+      #9c9c9c 1px 7px 1px,
+      #9c9c9c 1px 8px 1px,
+      #9c9c9c 1px 9px 1px,
+      #9c9c9c 1px 10px 1px,
+      #9c9c9c 1px 11px 1px,
+      #9c9c9c 1px 12px 1px,
+      rgba(16, 16, 16, 0.4) 1px 38px 26px,
+      rgba(16, 16, 16, 0.2) 1px 42px 30px,
+      rgba(16, 16, 16, 0.2) 1px 46px 65px,
+      rgba(16, 16, 16, 0.4) 1px 50px 95px,
+      white -0.15em -0.1em 100px;
+    }
+  }
+}

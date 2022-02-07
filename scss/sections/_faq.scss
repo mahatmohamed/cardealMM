@@ -1,0 +1,39 @@
+
+@use'../custom' as *;
+
+.faq{
+    margin-top: 3rem;
+    background-color: lighten($secondary, 15%);
+
+
+    .accodian {
+   
+        .accordion-item {
+            border: 2px solid rgba($secondary, 0.5);
+            border-top: 2px solid rgba($secondary, 0.5);
+            &:hover {
+                box-shadow: 1px 1px 25px 10px $white;
+              }
+            
+
+
+  
+
+
+
+            .accordion-button {
+                border-top: 2px solid rgba($secondary, 0.5);
+            }
+
+
+
+            .accordion-body{
+
+            background:$gradient;
+
+            }
+
+
+        }
+    }
+  }

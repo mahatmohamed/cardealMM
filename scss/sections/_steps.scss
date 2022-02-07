@@ -1,0 +1,61 @@
+@use'../custom' as *;
+
+
+  
+.call-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 500px;
+    height: 50px;
+    background: $gradient;
+    font-family: "lora", sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: $white;
+    border: 0.1rem solid $white;
+    a{
+        text-decoration: none !important;
+    }
+    
+  
+     
+      
+      &:hover {
+        box-shadow: 1px 1px 25px 10px $white;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+        .call-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 20px auto;
+            width: 200px;
+            height: 50px;
+            background: $gradient;
+            font-family: "lora", sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            color: $white;
+            border: 0.1rem solid $white;
+            a{
+                text-decoration: none !important;
+            }
+            
+          
+             
+              
+              &:hover {
+                box-shadow: 1px 1px 25px 10px $white;
+              }
+            }
+
+    }
+  
+ 

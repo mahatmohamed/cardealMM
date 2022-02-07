@@ -1,0 +1,20 @@
+@use '../custom' as*;
+
+
+.container-footer{
+
+    background: $gradient;
+    padding-top: 4rem;
+    font-family: "lora", sans-serif;
+
+    .footer{
+        color: $white !important;
+        background-color: lighten($secondary, 15%);
+        margin:0  3rem;
+       
+       
+
+    }
+
+
+}

@@ -1,0 +1,54 @@
+@use'../custom' as *;
+
+.testimonials{
+    background-color: lighten($secondary, 15%);
+    padding: 2rem;
+    color: $white !important;
+
+
+    .col{
+        background: $gradient;
+        border:.1rem solid $white;
+        i{
+            color: $white !important;
+            
+        }
+        &:hover {
+            box-shadow: 1px 1px 25px 10px $white;
+          }
+    
+    }
+    button{
+        margin-left: 82%;
+    }
+    
+
+}
+@media only screen and (max-width: 480px) {
+    .testimonials{
+        background-color: lighten($secondary, 15%);
+        padding: 2rem;
+        color: $white !important;
+    
+    
+        .col{
+            background: $gradient;
+            border:.1rem solid $white;
+            i{
+                filter: drop-shadow(0 0 3px $white);
+                color: $white !important;
+                
+            }
+            &:hover {
+                box-shadow: 1px 1px 25px 10px $white;
+              }
+        
+        }
+        button{
+            margin-left: 20% ;
+        }
+        
+    
+    }
+
+}

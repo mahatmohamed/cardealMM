@@ -1,0 +1,128 @@
+@use'../custom' as *;
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+    font-family:"lora", sans-serif;
+    color: $black;
+  
+  
+  .container-card {
+    display: flex;
+    width: 1040px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+  
+  
+  .card {
+    margin: 10px;
+    background: $gradient;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px $black;
+    overflow: hidden;
+    width: 300px;
+    i{
+        filter: drop-shadow(0 0 3px $white);
+        color: $black !important;
+        
+    }
+    &:hover {
+        box-shadow: 1px 1px 25px 10px $white;
+      }
+  
+  
+  .card-header{
+      
+    .ribbon {
+        width: 100px;
+        height: 200px;
+        overflow: hidden;
+        position: absolute;
+      
+        &::before, &::after {
+          position: absolute;
+          z-index: -1;
+          content: '';
+          display: block;
+          
+        }
+      
+        span {
+          position: absolute;
+          display: block;
+          width: 140px;
+          padding: 5px;
+          background-color: $black;
+          color: $primary;
+          font: 700 18px/1 'lora', sans-serif;
+          text-align: center;
+          i{
+            
+            color: $primary !important;
+            
+        }
+        }
+      }
+      
+      /* top right*/
+      
+      .ribbon-top-right {
+        top: -20px;
+        right: -10px;
+      
+        &::before, &::after {
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      
+        &::before {
+          top: 0;
+          left: 0;
+        }
+      
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+      
+        span {
+          left: -5px;
+          top: 5px;
+          transform: rotate(45deg);
+        }
+      }
+  
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            &:hover {
+            box-shadow: 1px 1px 25px 10px $white;
+      }
+    }
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 250px;
+    color: $white;
+  
+   p {
+    font-size: 13px;
+    margin: 0 0 40px;
+    color: $white;
+  }
+  
+  
+        }
+        }
+    }
+}
